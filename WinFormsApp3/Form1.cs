@@ -17,17 +17,6 @@ namespace WinFormsApp3
         {
             InitializeComponent();
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void resetButton_Click(object sender, EventArgs e)
         {
             licencePlateBox.Text = "";
@@ -37,12 +26,6 @@ namespace WinFormsApp3
             pictureBox1.Image = null;
 
         }
-
-        private void licencePlateBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void searchButton_Click(object sender, EventArgs e)
         {
             searchBox.Text = "Hello!";
@@ -52,7 +35,6 @@ namespace WinFormsApp3
         {
             
         }
-
         private void parkButton_Click(object sender, EventArgs e)
         {
             
@@ -80,12 +62,6 @@ namespace WinFormsApp3
             }
 
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void removeButton_Click(object sender, EventArgs e)
         {
             pictureBox1.Image = Properties.Resources.carred;

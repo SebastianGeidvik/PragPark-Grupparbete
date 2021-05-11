@@ -9,7 +9,7 @@ namespace Backend
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Server=DESKTOP-KQBHCD4\SQLEXPRESS;Database=PragParkWinform;Trusted_Connection=True;MultipleActiveResultSets=true");
+                optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-FPE71HP\SQLEXPRESS;Database=PragParkWinform;Trusted_Connection=True;MultipleActiveResultSets=true");
                 optionsBuilder.UseLazyLoadingProxies();
             }
         }

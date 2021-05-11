@@ -73,7 +73,6 @@ namespace WinFormsApp3
             this.licencePlateBox.Name = "licencePlateBox";
             this.licencePlateBox.Size = new System.Drawing.Size(192, 31);
             this.licencePlateBox.TabIndex = 1;
-            this.licencePlateBox.TextChanged += new System.EventHandler(this.licencePlateBox_TextChanged);
             // 
             // ownerBox
             // 
@@ -91,7 +90,6 @@ namespace WinFormsApp3
             this.ownerLabel.Size = new System.Drawing.Size(64, 25);
             this.ownerLabel.TabIndex = 4;
             this.ownerLabel.Text = "Owner";
-            this.ownerLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // parkButton
             // 
@@ -122,7 +120,6 @@ namespace WinFormsApp3
             this.typeOfVehicleLabel.Size = new System.Drawing.Size(192, 25);
             this.typeOfVehicleLabel.TabIndex = 7;
             this.typeOfVehicleLabel.Text = "Choose type of vehicle";
-            this.typeOfVehicleLabel.Click += new System.EventHandler(this.label3_Click);
             // 
             // searchBox
             // 
@@ -170,7 +167,6 @@ namespace WinFormsApp3
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form1
             // 
