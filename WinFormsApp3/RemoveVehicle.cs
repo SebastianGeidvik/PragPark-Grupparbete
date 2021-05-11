@@ -16,5 +16,13 @@ namespace WinFormsApp3
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Start start = new Start();
+            this.Visible = false;
+            start.ShowDialog();
+            this.Close();
+        }
     }
 }

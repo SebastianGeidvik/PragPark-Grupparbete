@@ -16,5 +16,29 @@ namespace WinFormsApp3
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Park park = new Park();
+            this.Visible = false;
+            park.ShowDialog();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Search search = new Search();
+            this.Visible = false;
+            search.ShowDialog();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            RemoveVehicle removeVehicle = new RemoveVehicle();
+            this.Visible = false;
+            removeVehicle.ShowDialog();
+            this.Close();
+        }
     }
 }

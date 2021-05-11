@@ -59,5 +59,13 @@ namespace WinFormsApp3
         {
             pictureBox1.Image = Properties.Resources.carred;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Start start = new Start();
+            this.Visible = false;
+            start.ShowDialog();
+            this.Close();
+        }
     }
 }

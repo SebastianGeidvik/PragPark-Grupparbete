@@ -36,41 +36,48 @@ namespace WinFormsApp3
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(184, 112);
+            this.button1.Location = new System.Drawing.Point(129, 67);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 74);
+            this.button1.Size = new System.Drawing.Size(78, 44);
             this.button1.TabIndex = 0;
             this.button1.Text = "Park";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(184, 360);
+            this.button2.Location = new System.Drawing.Point(129, 216);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 74);
+            this.button2.Size = new System.Drawing.Size(78, 44);
             this.button2.TabIndex = 1;
             this.button2.Text = "Remove";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(184, 235);
+            this.button3.Location = new System.Drawing.Point(129, 141);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 74);
+            this.button3.Size = new System.Drawing.Size(78, 44);
             this.button3.TabIndex = 2;
             this.button3.Text = "Search";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Start
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(479, 557);
+            this.ClientSize = new System.Drawing.Size(335, 334);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Start";
             this.ShowIcon = false;
