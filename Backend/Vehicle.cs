@@ -12,5 +12,11 @@ namespace Backend
         public string LicensePlate { get; set; }
         public string OwnerName { get; set; }
         public string VehicleType { get; set; }
+        public Vehicle(string licensePlate, string ownerName, string vehicleType)
+        {
+            LicensePlate = licensePlate;
+            OwnerName = ownerName;
+            VehicleType = vehicleType;
+        }
     }
 }

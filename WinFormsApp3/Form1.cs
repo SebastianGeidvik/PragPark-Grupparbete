@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Backend;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -54,7 +55,30 @@ namespace WinFormsApp3
 
         private void parkButton_Click(object sender, EventArgs e)
         {
-            pictureBox1.Image = Properties.Resources.cargreen;
+            
+            if (comboBox1.Text == "Car")
+            {
+                VehicleHandler.AddVehicle(licencePlateBox.Text, ownerBox.Text, "Car");
+                pictureBox1.Image = Properties.Resources.cargreen;
+                licencePlateBox.Text = "";
+                ownerBox.Text = "";
+                searchBox.Text = "";
+                comboBox1.Text = "";
+            }
+            else if (comboBox1.Text == "Mc")
+            {
+                VehicleHandler.AddVehicle(licencePlateBox.Text, ownerBox.Text, "Mc");
+                pictureBox1.Image = Properties.Resources.cargreen;
+                licencePlateBox.Text = "";
+                ownerBox.Text = "";
+                searchBox.Text = "";
+                comboBox1.Text = "";
+            }
+            else
+            {
+                throw new Exception();
+            }
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
