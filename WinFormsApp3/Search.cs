@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using Backend;
@@ -33,7 +34,7 @@ namespace WinFormsApp3
                 else if (comboBox1.Text == "Owner name")
                 {
                     var vehicleList = dbcontext.Vehicles.Where(v => v.OwnerName == textBox1.Text).ToList();
-                    foreach(Vehicle vehicle in vehicleList)
+                    foreach (Vehicle vehicle in vehicleList)
                     {
                         parkingSpotBox.Items.Add($"Spot: {vehicle.Id} | {vehicle.LicensePlate}");
                     }
@@ -53,6 +54,13 @@ namespace WinFormsApp3
         private void parkingSpotBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            parkingSpotBox.Items.Clear();
+            comboBox1.Text = "";
         }
     }
 }
