@@ -22,8 +22,8 @@ namespace Backend
                 //optionsBuilder.UseLazyLoadingProxies();
 
                 //Sebastian
-                optionsBuilder.UseSqlServer(@"Server=LAPTOP-M2HEUQ01\SQLEXPRESS;Database=PragParkWinform;Trusted_Connection=True;MultipleActiveResultSets=true");
-                optionsBuilder.UseLazyLoadingProxies();
+                //optionsBuilder.UseSqlServer(@"Server=LAPTOP-M2HEUQ01\SQLEXPRESS;Database=PragParkWinform;Trusted_Connection=True;MultipleActiveResultSets=true");
+                //optionsBuilder.UseLazyLoadingProxies();
             }
         }
 
