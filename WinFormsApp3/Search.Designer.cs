@@ -67,12 +67,13 @@ namespace WinFormsApp3
             // parkingSpotBox
             // 
             this.parkingSpotBox.BackColor = System.Drawing.Color.Black;
+            this.parkingSpotBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.parkingSpotBox.ForeColor = System.Drawing.Color.White;
             this.parkingSpotBox.FormattingEnabled = true;
             this.parkingSpotBox.ItemHeight = 25;
-            this.parkingSpotBox.Location = new System.Drawing.Point(149, 280);
+            this.parkingSpotBox.Location = new System.Drawing.Point(155, 336);
             this.parkingSpotBox.Name = "parkingSpotBox";
-            this.parkingSpotBox.Size = new System.Drawing.Size(180, 129);
+            this.parkingSpotBox.Size = new System.Drawing.Size(180, 125);
             this.parkingSpotBox.TabIndex = 4;
             this.parkingSpotBox.SelectedIndexChanged += new System.EventHandler(this.parkingSpotBox_SelectedIndexChanged);
             // 
