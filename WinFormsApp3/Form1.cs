@@ -24,7 +24,6 @@ namespace WinFormsApp3
             searchBox.Text = "";
             comboBox1.Text = "";
             pictureBox1.Image = null;
-
         }
         private void searchButton_Click(object sender, EventArgs e)
         {
@@ -37,7 +36,6 @@ namespace WinFormsApp3
         }
         private void parkButton_Click(object sender, EventArgs e)
         {
-            
             if (comboBox1.Text == "Car")
             {
                 VehicleHandler.AddVehicle(licencePlateBox.Text, ownerBox.Text, "Car");
@@ -60,7 +58,6 @@ namespace WinFormsApp3
             {
                 throw new Exception();
             }
-
         }
         private void removeButton_Click(object sender, EventArgs e)
         {
