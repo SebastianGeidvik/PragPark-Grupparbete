@@ -14,12 +14,12 @@ namespace Backend
                 //optionsBuilder.UseLazyLoadingProxies();
 
                 //Tintin
-                //optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-FPE71HP\SQLEXPRESS;Database=PragParkWinform;Trusted_Connection=True;MultipleActiveResultSets=true");
-                //optionsBuilder.UseLazyLoadingProxies();
+                optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-FPE71HP\SQLEXPRESS;Database=PragParkWinform;Trusted_Connection=True;MultipleActiveResultSets=true");
+                optionsBuilder.UseLazyLoadingProxies();
 
                 //Björn
-                optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Database=PragParkWinform;Trusted_Connection=True;MultipleActiveResultSets=true");
-                optionsBuilder.UseLazyLoadingProxies();
+                //optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Database=PragParkWinform;Trusted_Connection=True;MultipleActiveResultSets=true");
+                //optionsBuilder.UseLazyLoadingProxies();
             }
         }
 
