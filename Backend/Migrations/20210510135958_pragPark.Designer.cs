@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Backend.Migrations
 {
-    [DbContext(typeof(DbContextPragPark))]
+    [DbContext(typeof(PragParkContext))]
     [Migration("20210510135958_pragPark")]
     partial class pragPark
     {
