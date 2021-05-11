@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace WinFormsApp3
 {
-    public partial class Form1 : Form
+    public partial class Park : Form
     {
-        public Form1()
+        public Park()
         {
             InitializeComponent();
         }
@@ -32,7 +32,6 @@ namespace WinFormsApp3
         {
             licencePlateBox.Text = "";
             ownerBox.Text = "";
-            searchBox.Text = "";
             comboBox1.Text = "";
             pictureBox1.Image = null;
 
@@ -45,7 +44,6 @@ namespace WinFormsApp3
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            searchBox.Text = "Hello!";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -62,7 +60,6 @@ namespace WinFormsApp3
                 pictureBox1.Image = Properties.Resources.cargreen;
                 licencePlateBox.Text = "";
                 ownerBox.Text = "";
-                searchBox.Text = "";
                 comboBox1.Text = "";
             }
             else if (comboBox1.Text == "Mc")
@@ -71,7 +68,6 @@ namespace WinFormsApp3
                 pictureBox1.Image = Properties.Resources.cargreen;
                 licencePlateBox.Text = "";
                 ownerBox.Text = "";
-                searchBox.Text = "";
                 comboBox1.Text = "";
             }
             else

@@ -1,7 +1,7 @@
 ﻿
 namespace WinFormsApp3
 {
-    partial class Form1
+    partial class Park
     {
         /// <summary>
         ///  Required designer variable.
@@ -37,11 +37,8 @@ namespace WinFormsApp3
             this.parkButton = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
             this.typeOfVehicleLabel = new System.Windows.Forms.Label();
-            this.searchBox = new System.Windows.Forms.TextBox();
-            this.searchLabel = new System.Windows.Forms.Label();
-            this.searchButton = new System.Windows.Forms.Button();
-            this.removeButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +47,7 @@ namespace WinFormsApp3
             this.licencePlateLabel.AutoSize = true;
             this.licencePlateLabel.BackColor = System.Drawing.Color.Black;
             this.licencePlateLabel.ForeColor = System.Drawing.Color.White;
-            this.licencePlateLabel.Location = new System.Drawing.Point(145, 40);
+            this.licencePlateLabel.Location = new System.Drawing.Point(189, 40);
             this.licencePlateLabel.Name = "licencePlateLabel";
             this.licencePlateLabel.Size = new System.Drawing.Size(111, 25);
             this.licencePlateLabel.TabIndex = 0;
@@ -86,7 +83,7 @@ namespace WinFormsApp3
             // 
             this.ownerLabel.AutoSize = true;
             this.ownerLabel.ForeColor = System.Drawing.Color.White;
-            this.ownerLabel.Location = new System.Drawing.Point(145, 130);
+            this.ownerLabel.Location = new System.Drawing.Point(210, 130);
             this.ownerLabel.Name = "ownerLabel";
             this.ownerLabel.Size = new System.Drawing.Size(64, 25);
             this.ownerLabel.TabIndex = 4;
@@ -95,7 +92,7 @@ namespace WinFormsApp3
             // 
             // parkButton
             // 
-            this.parkButton.Location = new System.Drawing.Point(145, 328);
+            this.parkButton.Location = new System.Drawing.Point(198, 330);
             this.parkButton.Name = "parkButton";
             this.parkButton.Size = new System.Drawing.Size(85, 62);
             this.parkButton.TabIndex = 4;
@@ -124,44 +121,6 @@ namespace WinFormsApp3
             this.typeOfVehicleLabel.Text = "Choose type of vehicle";
             this.typeOfVehicleLabel.Click += new System.EventHandler(this.label3_Click);
             // 
-            // searchBox
-            // 
-            this.searchBox.Location = new System.Drawing.Point(12, 473);
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(123, 31);
-            this.searchBox.TabIndex = 5;
-            // 
-            // searchLabel
-            // 
-            this.searchLabel.AutoSize = true;
-            this.searchLabel.BackColor = System.Drawing.Color.Black;
-            this.searchLabel.ForeColor = System.Drawing.Color.White;
-            this.searchLabel.Location = new System.Drawing.Point(12, 445);
-            this.searchLabel.Name = "searchLabel";
-            this.searchLabel.Size = new System.Drawing.Size(123, 25);
-            this.searchLabel.TabIndex = 9;
-            this.searchLabel.Text = "Search Vehicle";
-            // 
-            // searchButton
-            // 
-            this.searchButton.Location = new System.Drawing.Point(12, 510);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(123, 34);
-            this.searchButton.TabIndex = 6;
-            this.searchButton.Text = "Search";
-            this.searchButton.UseVisualStyleBackColor = true;
-            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
-            // 
-            // removeButton
-            // 
-            this.removeButton.Location = new System.Drawing.Point(252, 328);
-            this.removeButton.Name = "removeButton";
-            this.removeButton.Size = new System.Drawing.Size(85, 62);
-            this.removeButton.TabIndex = 10;
-            this.removeButton.Text = "Remove";
-            this.removeButton.UseVisualStyleBackColor = true;
-            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(169, 445);
@@ -172,17 +131,23 @@ namespace WinFormsApp3
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 507);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 34);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Return";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(475, 553);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.removeButton);
-            this.Controls.Add(this.searchButton);
-            this.Controls.Add(this.searchLabel);
-            this.Controls.Add(this.searchBox);
             this.Controls.Add(this.typeOfVehicleLabel);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.parkButton);
@@ -196,7 +161,7 @@ namespace WinFormsApp3
             this.Name = "Form1";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Prage Park";
+            this.Text = "Park Vehicle";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -214,11 +179,8 @@ namespace WinFormsApp3
         private System.Windows.Forms.Button parkButton;
         private System.Windows.Forms.Button resetButton;
         private System.Windows.Forms.Label typeOfVehicleLabel;
-        private System.Windows.Forms.TextBox searchBox;
-        private System.Windows.Forms.Label searchLabel;
-        private System.Windows.Forms.Button searchButton;
-        private System.Windows.Forms.Button removeButton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
