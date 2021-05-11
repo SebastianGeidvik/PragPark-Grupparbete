@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Backend;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +24,16 @@ namespace WinFormsApp3
             this.Visible = false;
             start.ShowDialog();
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using(PragParkContext dbContex = new PragParkContext())
+            {
+                var bil = dbContex.Vehicles.Where(c => c.LicensePlate == textBox1.Text).First();
+                dbContex.Vehicles.Remove(bil);
+                dbContex.SaveChanges();
+            }
         }
     }
 }
