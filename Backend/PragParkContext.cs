@@ -18,7 +18,11 @@ namespace Backend
                 //optionsBuilder.UseLazyLoadingProxies();
 
                 //Björn
-                optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Database=PragParkWinform;Trusted_Connection=True;MultipleActiveResultSets=true");
+                //optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Database=PragParkWinform;Trusted_Connection=True;MultipleActiveResultSets=true");
+                //optionsBuilder.UseLazyLoadingProxies();
+
+                //Sebastian
+                optionsBuilder.UseSqlServer(@"Server=LAPTOP-M2HEUQ01\SQLEXPRESS;Database=PragParkWinform;Trusted_Connection=True;MultipleActiveResultSets=true");
                 optionsBuilder.UseLazyLoadingProxies();
             }
         }
