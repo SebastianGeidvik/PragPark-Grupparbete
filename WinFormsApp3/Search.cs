@@ -30,6 +30,7 @@ namespace WinFormsApp3
                 {
                     Vehicle vehicle = dbcontext.Vehicles.Where(v => v.LicensePlate == textBox1.Text).First();
                     parkingSpotBox.Items.Add($"Spot: {vehicle.Id}");
+                    label2.Text = "";
                 }
                 else if (comboBox1.Text == "Owner name")
                 {
@@ -38,6 +39,7 @@ namespace WinFormsApp3
                     {
                         parkingSpotBox.Items.Add($"Spot: {vehicle.Id} | {vehicle.LicensePlate}");
                     }
+                    label2.Text = "";
                 }
                 else
                 {
@@ -48,7 +50,16 @@ namespace WinFormsApp3
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (comboBox1.Text == "License plate")
+            {
+                label2.Text = "Enter license plate";
+                textBox1.Visible = true;
+            }
+            else if (comboBox1.Text == "Owner name")
+            {
+                label2.Text = "Enter owner name";
+                textBox1.Visible = true;
+            }
         }
 
         private void parkingSpotBox_SelectedIndexChanged(object sender, EventArgs e)

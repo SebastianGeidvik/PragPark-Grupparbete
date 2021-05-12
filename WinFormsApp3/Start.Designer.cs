@@ -36,10 +36,11 @@ namespace WinFormsApp3
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(129, 67);
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(85, 60);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 44);
+            this.button1.Size = new System.Drawing.Size(180, 51);
             this.button1.TabIndex = 0;
             this.button1.Text = "Park";
             this.button1.UseVisualStyleBackColor = true;
@@ -47,10 +48,11 @@ namespace WinFormsApp3
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(129, 216);
+            this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.Location = new System.Drawing.Point(85, 213);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 44);
+            this.button2.Size = new System.Drawing.Size(180, 47);
             this.button2.TabIndex = 1;
             this.button2.Text = "Remove";
             this.button2.UseVisualStyleBackColor = true;
@@ -58,10 +60,11 @@ namespace WinFormsApp3
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(129, 141);
+            this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button3.Location = new System.Drawing.Point(85, 137);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(78, 44);
+            this.button3.Size = new System.Drawing.Size(180, 49);
             this.button3.TabIndex = 2;
             this.button3.Text = "Search";
             this.button3.UseVisualStyleBackColor = true;
