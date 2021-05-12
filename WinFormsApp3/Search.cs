@@ -68,5 +68,10 @@ namespace WinFormsApp3
             listBox_SearchResult.Items.Clear();
             comboBox_SearchOption.Text = "";
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

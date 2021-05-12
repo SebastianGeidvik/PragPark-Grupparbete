@@ -47,5 +47,10 @@ namespace WinFormsApp3
                 button1_Click(null, EventArgs.Empty);
             }
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

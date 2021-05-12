@@ -40,5 +40,10 @@ namespace WinFormsApp3
             removeVehicle.ShowDialog();
             this.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
