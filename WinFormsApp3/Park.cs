@@ -51,7 +51,7 @@ namespace WinFormsApp3
                 }
                 catch (ApplicationException ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show($"Mc could not be parked.\n{ex.Message}");
                 }
                 catch (Exception ex)
                 {
