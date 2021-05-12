@@ -29,7 +29,7 @@ namespace WinFormsApp3
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_Remove = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -38,16 +38,16 @@ namespace WinFormsApp3
             ((System.ComponentModel.ISupportInitialize)(this.picBox_Remove)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // button_Remove
             // 
-            this.button1.Location = new System.Drawing.Point(115, 161);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 24);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Remove";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_Remove.Location = new System.Drawing.Point(115, 161);
+            this.button_Remove.Margin = new System.Windows.Forms.Padding(2);
+            this.button_Remove.Name = "button_Remove";
+            this.button_Remove.Size = new System.Drawing.Size(109, 24);
+            this.button_Remove.TabIndex = 0;
+            this.button_Remove.Text = "Remove";
+            this.button_Remove.UseVisualStyleBackColor = true;
+            this.button_Remove.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -56,6 +56,7 @@ namespace WinFormsApp3
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(110, 23);
             this.textBox1.TabIndex = 2;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label2
             // 
@@ -110,7 +111,7 @@ namespace WinFormsApp3
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_Remove);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
@@ -126,7 +127,7 @@ namespace WinFormsApp3
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_Remove;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;

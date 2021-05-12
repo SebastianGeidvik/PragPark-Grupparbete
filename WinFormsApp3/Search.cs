@@ -62,7 +62,6 @@ namespace WinFormsApp3
                 textBox_SearchText.Visible = true;
             }
         }
-
         private void button_Reset_Click(object sender, EventArgs e)
         {
             textBox_SearchText.Text = "";

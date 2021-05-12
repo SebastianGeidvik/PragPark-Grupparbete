@@ -33,13 +33,14 @@ namespace WinFormsApp3
                     VehicleHandler.AddVehicle(textBox_LicensePlate.Text, textBox_Owner.Text, "Car");
                     pictureBox_ParkIcon.Image = Properties.Resources.cargreen;
                 }
-                catch
+                catch(ApplicationException ex)
                 {
-                    MessageBox.Show("Car could not be added.");
+                    MessageBox.Show($"Car could not be parked.\n{ex.Message}");
                 }
-                textBox_LicensePlate.Text = "";
-                textBox_Owner.Text = "";
-                comboBox_VehicleType.Text = "";
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
             else if (comboBox_VehicleType.Text == "Mc")
             {
@@ -48,17 +49,18 @@ namespace WinFormsApp3
                     VehicleHandler.AddVehicle(textBox_LicensePlate.Text, textBox_Owner.Text, "Mc");
                     pictureBox_ParkIcon.Image = Properties.Resources.cargreen;
                 }
-                catch
+                catch (ApplicationException ex)
                 {
-                    MessageBox.Show("Mc could not be added.");
+                    MessageBox.Show(ex.Message);
                 }
-                finally
+                catch (Exception ex)
                 {
-                    textBox_LicensePlate.Text = "";
-                    textBox_Owner.Text = "";
-                    comboBox_VehicleType.Text = "";
+                    MessageBox.Show(ex.Message);
                 }
             }
+            textBox_LicensePlate.Text = "";
+            textBox_Owner.Text = "";
+            comboBox_VehicleType.Text = "";
         }
         private void Button_Return_Click(object sender, EventArgs e)
         {

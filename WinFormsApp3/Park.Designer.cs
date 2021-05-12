@@ -56,6 +56,8 @@ namespace WinFormsApp3
             // 
             // comboBox_VehicleType
             // 
+            this.comboBox_VehicleType.AllowDrop = true;
+            this.comboBox_VehicleType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_VehicleType.FormattingEnabled = true;
             this.comboBox_VehicleType.Items.AddRange(new object[] {
             "Car",
@@ -70,6 +72,7 @@ namespace WinFormsApp3
             // 
             this.textBox_LicensePlate.Location = new System.Drawing.Point(102, 41);
             this.textBox_LicensePlate.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_LicensePlate.MaxLength = 10;
             this.textBox_LicensePlate.Name = "textBox_LicensePlate";
             this.textBox_LicensePlate.Size = new System.Drawing.Size(135, 23);
             this.textBox_LicensePlate.TabIndex = 1;

@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Backend;
 
 namespace WinFormsApp3
 {
@@ -37,6 +36,15 @@ namespace WinFormsApp3
             catch(Exception)
             {
                 MessageBox.Show("License plate does not exist in the database");
+            }
+            textBox1.Text = "";
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                button1_Click(null, EventArgs.Empty);
             }
         }
     }
