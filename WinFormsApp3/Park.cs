@@ -17,50 +17,50 @@ namespace WinFormsApp3
         {
             InitializeComponent();
         }
-        private void resetButton_Click(object sender, EventArgs e)
+        private void Button_Reset_Click(object sender, EventArgs e)
         {
-            licencePlateBox.Text = "";
-            ownerBox.Text = "";
-            comboBox1.Text = "";
-            pictureBox1.Image = null;
+            textBox_LicensePlate.Text = "";
+            textBox_Owner.Text = "";
+            comboBox_VehicleType.Text = "";
+            pictureBox_ParkIcon.Image = null;
         }
-        private void searchButton_Click(object sender, EventArgs e)
+        private void Button_Park_Click(object sender, EventArgs e)
         {
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-        private void parkButton_Click(object sender, EventArgs e)
-        {
-            if (comboBox1.Text == "Car")
+            if (comboBox_VehicleType.Text == "Car")
             {
-                VehicleHandler.AddVehicle(licencePlateBox.Text, ownerBox.Text, "Car");
-                pictureBox1.Image = Properties.Resources.cargreen;
-                licencePlateBox.Text = "";
-                ownerBox.Text = "";
-                comboBox1.Text = "";
+                try
+                {
+                    VehicleHandler.AddVehicle(textBox_LicensePlate.Text, textBox_Owner.Text, "Car");
+                    pictureBox_ParkIcon.Image = Properties.Resources.cargreen;
+                }
+                catch
+                {
+                    MessageBox.Show("Car could not be added.");
+                }
+                textBox_LicensePlate.Text = "";
+                textBox_Owner.Text = "";
+                comboBox_VehicleType.Text = "";
             }
-            else if (comboBox1.Text == "Mc")
+            else if (comboBox_VehicleType.Text == "Mc")
             {
-                VehicleHandler.AddVehicle(licencePlateBox.Text, ownerBox.Text, "Mc");
-                pictureBox1.Image = Properties.Resources.cargreen;
-                licencePlateBox.Text = "";
-                ownerBox.Text = "";
-                comboBox1.Text = "";
-            }
-            else
-            {
-                throw new Exception();
+                try
+                {
+                    VehicleHandler.AddVehicle(textBox_LicensePlate.Text, textBox_Owner.Text, "Mc");
+                    pictureBox_ParkIcon.Image = Properties.Resources.cargreen;
+                }
+                catch
+                {
+                    MessageBox.Show("Mc could not be added.");
+                }
+                finally
+                {
+                    textBox_LicensePlate.Text = "";
+                    textBox_Owner.Text = "";
+                    comboBox_VehicleType.Text = "";
+                }
             }
         }
-        private void removeButton_Click(object sender, EventArgs e)
-        {
-            pictureBox1.Image = Properties.Resources.carred;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void Button_Return_Click(object sender, EventArgs e)
         {
             Start start = new Start();
             this.Visible = false;

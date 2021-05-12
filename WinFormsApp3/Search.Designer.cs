@@ -29,84 +29,83 @@ namespace WinFormsApp3
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.parkingSpotBox = new System.Windows.Forms.ListBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.resetButton = new System.Windows.Forms.Button();
+            this.button_Search = new System.Windows.Forms.Button();
+            this.textBox_SearchText = new System.Windows.Forms.TextBox();
+            this.button_Return = new System.Windows.Forms.Button();
+            this.listBox_SearchResult = new System.Windows.Forms.ListBox();
+            this.comboBox_SearchOption = new System.Windows.Forms.ComboBox();
+            this.button_Reset = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // button_Search
             // 
-            this.button1.Location = new System.Drawing.Point(85, 135);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 29);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_Search.Location = new System.Drawing.Point(85, 135);
+            this.button_Search.Margin = new System.Windows.Forms.Padding(2);
+            this.button_Search.Name = "button_Search";
+            this.button_Search.Size = new System.Drawing.Size(173, 29);
+            this.button_Search.TabIndex = 3;
+            this.button_Search.Text = "Search";
+            this.button_Search.UseVisualStyleBackColor = true;
+            this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
             // 
-            // textBox1
+            // textBox_SearchText
             // 
-            this.textBox1.Location = new System.Drawing.Point(84, 94);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(173, 23);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Visible = false;
+            this.textBox_SearchText.Location = new System.Drawing.Point(84, 94);
+            this.textBox_SearchText.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SearchText.Name = "textBox_SearchText";
+            this.textBox_SearchText.Size = new System.Drawing.Size(173, 23);
+            this.textBox_SearchText.TabIndex = 2;
+            this.textBox_SearchText.Visible = false;
             // 
-            // button2
+            // button_Return
             // 
-            this.button2.Location = new System.Drawing.Point(8, 307);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 20);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Return";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button_Return.Location = new System.Drawing.Point(8, 302);
+            this.button_Return.Margin = new System.Windows.Forms.Padding(2);
+            this.button_Return.Name = "button_Return";
+            this.button_Return.Size = new System.Drawing.Size(78, 25);
+            this.button_Return.TabIndex = 6;
+            this.button_Return.Text = "Return";
+            this.button_Return.UseVisualStyleBackColor = true;
+            this.button_Return.Click += new System.EventHandler(this.button_Return_Click);
             // 
-            // parkingSpotBox
+            // listBox_SearchResult
             // 
-            this.parkingSpotBox.BackColor = System.Drawing.Color.Black;
-            this.parkingSpotBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.parkingSpotBox.ForeColor = System.Drawing.Color.White;
-            this.parkingSpotBox.FormattingEnabled = true;
-            this.parkingSpotBox.ItemHeight = 15;
-            this.parkingSpotBox.Location = new System.Drawing.Point(108, 202);
-            this.parkingSpotBox.Margin = new System.Windows.Forms.Padding(2);
-            this.parkingSpotBox.Name = "parkingSpotBox";
-            this.parkingSpotBox.Size = new System.Drawing.Size(126, 75);
-            this.parkingSpotBox.TabIndex = 4;
-            this.parkingSpotBox.SelectedIndexChanged += new System.EventHandler(this.parkingSpotBox_SelectedIndexChanged);
+            this.listBox_SearchResult.BackColor = System.Drawing.Color.Black;
+            this.listBox_SearchResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox_SearchResult.ForeColor = System.Drawing.Color.White;
+            this.listBox_SearchResult.FormattingEnabled = true;
+            this.listBox_SearchResult.ItemHeight = 15;
+            this.listBox_SearchResult.Location = new System.Drawing.Point(108, 202);
+            this.listBox_SearchResult.Margin = new System.Windows.Forms.Padding(2);
+            this.listBox_SearchResult.Name = "listBox_SearchResult";
+            this.listBox_SearchResult.Size = new System.Drawing.Size(126, 75);
+            this.listBox_SearchResult.TabIndex = 4;
             // 
-            // comboBox1
+            // comboBox_SearchOption
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBox_SearchOption.FormattingEnabled = true;
+            this.comboBox_SearchOption.Items.AddRange(new object[] {
             "License plate",
             "Owner name"});
-            this.comboBox1.Location = new System.Drawing.Point(85, 40);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(173, 23);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.Text = "Choose Option";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox_SearchOption.Location = new System.Drawing.Point(85, 40);
+            this.comboBox_SearchOption.Name = "comboBox_SearchOption";
+            this.comboBox_SearchOption.Size = new System.Drawing.Size(173, 23);
+            this.comboBox_SearchOption.TabIndex = 1;
+            this.comboBox_SearchOption.Text = "Choose Option";
+            this.comboBox_SearchOption.SelectedIndexChanged += new System.EventHandler(this.comboBox_SearchOption_SelectedIndexChanged);
             // 
-            // resetButton
+            // button_Reset
             // 
-            this.resetButton.Location = new System.Drawing.Point(248, 307);
-            this.resetButton.Margin = new System.Windows.Forms.Padding(2);
-            this.resetButton.Name = "resetButton";
-            this.resetButton.Size = new System.Drawing.Size(78, 20);
-            this.resetButton.TabIndex = 5;
-            this.resetButton.Text = "Reset";
-            this.resetButton.UseVisualStyleBackColor = true;
-            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
+            this.button_Reset.Location = new System.Drawing.Point(248, 302);
+            this.button_Reset.Margin = new System.Windows.Forms.Padding(2);
+            this.button_Reset.Name = "button_Reset";
+            this.button_Reset.Size = new System.Drawing.Size(78, 25);
+            this.button_Reset.TabIndex = 5;
+            this.button_Reset.Text = "Reset";
+            this.button_Reset.UseVisualStyleBackColor = true;
+            this.button_Reset.Click += new System.EventHandler(this.button_Reset_Click);
             // 
             // label1
             // 
@@ -135,12 +134,12 @@ namespace WinFormsApp3
             this.ClientSize = new System.Drawing.Size(335, 334);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.resetButton);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.parkingSpotBox);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_Reset);
+            this.Controls.Add(this.comboBox_SearchOption);
+            this.Controls.Add(this.listBox_SearchResult);
+            this.Controls.Add(this.button_Return);
+            this.Controls.Add(this.textBox_SearchText);
+            this.Controls.Add(this.button_Search);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Search";
             this.ShowIcon = false;
@@ -153,12 +152,12 @@ namespace WinFormsApp3
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox parkingSpotBox;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button resetButton;
+        private System.Windows.Forms.Button button_Search;
+        private System.Windows.Forms.TextBox textBox_SearchText;
+        private System.Windows.Forms.Button button_Return;
+        private System.Windows.Forms.ListBox listBox_SearchResult;
+        private System.Windows.Forms.ComboBox comboBox_SearchOption;
+        private System.Windows.Forms.Button button_Reset;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }

@@ -20,8 +20,13 @@ namespace Backend
         {
             using (var dbContext = new PragParkContext())
             {
-                dbContext.Vehicles.Remove(new Vehicle(licensePlate, null, null));
-                dbContext.SaveChanges();
+               
+                var car = dbContext.Vehicles.First(v => v.LicensePlate == licensePlate);
+                if (car != null)
+                {
+                    dbContext.Vehicles.Remove(car);
+                    dbContext.SaveChanges();
+                }
             }
         }
     }

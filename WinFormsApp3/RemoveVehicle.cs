@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Backend;
 
 namespace WinFormsApp3
 {
@@ -28,11 +29,14 @@ namespace WinFormsApp3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using(PragParkContext dbContex = new PragParkContext())
+            try
             {
-                var bil = dbContex.Vehicles.Where(c => c.LicensePlate == textBox1.Text).First();
-                dbContex.Vehicles.Remove(bil);
-                dbContex.SaveChanges();
+                VehicleHandler.RemoveVehicle(textBox1.Text);
+                picBox_Remove.Image = Properties.Resources.carred;
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("License plate does not exist in the database");
             }
         }
     }

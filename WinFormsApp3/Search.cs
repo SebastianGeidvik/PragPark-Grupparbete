@@ -14,7 +14,7 @@ namespace WinFormsApp3
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button_Return_Click(object sender, EventArgs e)
         {
             Start start = new Start();
             this.Visible = false;
@@ -22,22 +22,23 @@ namespace WinFormsApp3
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button_Search_Click(object sender, EventArgs e)
         {
+            listBox_SearchResult.Items.Clear();
             using (var dbcontext = new PragParkContext())
             {
-                if (comboBox1.Text == "License plate")
+                if (comboBox_SearchOption.Text == "License plate")
                 {
-                    Vehicle vehicle = dbcontext.Vehicles.Where(v => v.LicensePlate == textBox1.Text).First();
-                    parkingSpotBox.Items.Add($"Spot: {vehicle.Id}");
+                    Vehicle vehicle = dbcontext.Vehicles.Where(v => v.LicensePlate == textBox_SearchText.Text).First();
+                    listBox_SearchResult.Items.Add($"Spot: {vehicle.Id}");
                     label2.Text = "";
                 }
-                else if (comboBox1.Text == "Owner name")
+                else if (comboBox_SearchOption.Text == "Owner name")
                 {
-                    var vehicleList = dbcontext.Vehicles.Where(v => v.OwnerName == textBox1.Text).ToList();
+                    var vehicleList = dbcontext.Vehicles.Where(v => v.OwnerName == textBox_SearchText.Text).ToList();
                     foreach (Vehicle vehicle in vehicleList)
                     {
-                        parkingSpotBox.Items.Add($"Spot: {vehicle.Id} | {vehicle.LicensePlate}");
+                        listBox_SearchResult.Items.Add($"Spot: {vehicle.Id} | {vehicle.LicensePlate}");
                     }
                     label2.Text = "";
                 }
@@ -48,30 +49,25 @@ namespace WinFormsApp3
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox_SearchOption_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.Text == "License plate")
+            if (comboBox_SearchOption.Text == "License plate")
             {
                 label2.Text = "Enter license plate";
-                textBox1.Visible = true;
+                textBox_SearchText.Visible = true;
             }
-            else if (comboBox1.Text == "Owner name")
+            else if (comboBox_SearchOption.Text == "Owner name")
             {
                 label2.Text = "Enter owner name";
-                textBox1.Visible = true;
+                textBox_SearchText.Visible = true;
             }
         }
 
-        private void parkingSpotBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void button_Reset_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void resetButton_Click(object sender, EventArgs e)
-        {
-            textBox1.Text = "";
-            parkingSpotBox.Items.Clear();
-            comboBox1.Text = "";
+            textBox_SearchText.Text = "";
+            listBox_SearchResult.Items.Clear();
+            comboBox_SearchOption.Text = "";
         }
     }
 }
