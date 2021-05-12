@@ -42,10 +42,10 @@ namespace WinFormsApp3
             // 
             // button_Remove
             // 
-            this.button_Remove.Location = new System.Drawing.Point(190, 263);
-            this.button_Remove.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button_Remove.Location = new System.Drawing.Point(202, 271);
+            this.button_Remove.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_Remove.Name = "button_Remove";
-            this.button_Remove.Size = new System.Drawing.Size(125, 32);
+            this.button_Remove.Size = new System.Drawing.Size(109, 24);
             this.button_Remove.TabIndex = 0;
             this.button_Remove.Text = "Remove";
             this.button_Remove.UseVisualStyleBackColor = true;
@@ -53,10 +53,10 @@ namespace WinFormsApp3
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(290, 207);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textBox1.Location = new System.Drawing.Point(290, 229);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
+            this.textBox1.Size = new System.Drawing.Size(110, 23);
             this.textBox1.TabIndex = 2;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -65,19 +65,19 @@ namespace WinFormsApp3
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(290, 166);
+            this.label2.Location = new System.Drawing.Point(290, 198);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 20);
+            this.label2.Size = new System.Drawing.Size(105, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "Enter License Plate";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(100, 423);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button2.Location = new System.Drawing.Point(124, 391);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 33);
+            this.button2.Size = new System.Drawing.Size(78, 25);
             this.button2.TabIndex = 4;
             this.button2.Text = "Return";
             this.button2.UseVisualStyleBackColor = true;
@@ -85,10 +85,10 @@ namespace WinFormsApp3
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(281, 495);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button3.Location = new System.Drawing.Point(282, 445);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 33);
+            this.button3.Size = new System.Drawing.Size(78, 25);
             this.button3.TabIndex = 5;
             this.button3.Text = "Reset";
             this.button3.UseVisualStyleBackColor = true;
@@ -96,20 +96,20 @@ namespace WinFormsApp3
             // picBox_Remove
             // 
             this.picBox_Remove.BackColor = System.Drawing.Color.White;
-            this.picBox_Remove.Location = new System.Drawing.Point(257, 320);
-            this.picBox_Remove.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.picBox_Remove.Location = new System.Drawing.Point(261, 314);
+            this.picBox_Remove.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picBox_Remove.Name = "picBox_Remove";
-            this.picBox_Remove.Size = new System.Drawing.Size(125, 77);
+            this.picBox_Remove.Size = new System.Drawing.Size(109, 58);
             this.picBox_Remove.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox_Remove.TabIndex = 12;
             this.picBox_Remove.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(465, 337);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button1.Location = new System.Drawing.Point(443, 327);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 33);
+            this.button1.Size = new System.Drawing.Size(78, 25);
             this.button1.TabIndex = 13;
             this.button1.Text = "Close";
             this.button1.UseVisualStyleBackColor = true;
@@ -117,11 +117,11 @@ namespace WinFormsApp3
             // 
             // RemoveVehicle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(622, 745);
+            this.ClientSize = new System.Drawing.Size(644, 796);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.picBox_Remove);
             this.Controls.Add(this.button3);
@@ -130,7 +130,7 @@ namespace WinFormsApp3
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button_Remove);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "RemoveVehicle";
             this.ShowIcon = false;

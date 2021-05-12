@@ -39,10 +39,10 @@ namespace WinFormsApp3
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(208, 219);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button1.Location = new System.Drawing.Point(245, 257);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(206, 68);
+            this.button1.Size = new System.Drawing.Size(180, 51);
             this.button1.TabIndex = 0;
             this.button1.Text = "Park";
             this.button1.UseVisualStyleBackColor = true;
@@ -51,10 +51,10 @@ namespace WinFormsApp3
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(208, 444);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button2.Location = new System.Drawing.Point(245, 426);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(206, 63);
+            this.button2.Size = new System.Drawing.Size(180, 47);
             this.button2.TabIndex = 1;
             this.button2.Text = "Remove";
             this.button2.UseVisualStyleBackColor = true;
@@ -63,10 +63,10 @@ namespace WinFormsApp3
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(208, 324);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button3.Location = new System.Drawing.Point(245, 336);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(206, 65);
+            this.button3.Size = new System.Drawing.Size(180, 49);
             this.button3.TabIndex = 2;
             this.button3.Text = "Search";
             this.button3.UseVisualStyleBackColor = true;
@@ -75,10 +75,10 @@ namespace WinFormsApp3
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(208, 631);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button4.Location = new System.Drawing.Point(245, 566);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(206, 63);
+            this.button4.Size = new System.Drawing.Size(180, 47);
             this.button4.TabIndex = 3;
             this.button4.Text = "Close";
             this.button4.UseVisualStyleBackColor = true;
@@ -86,7 +86,7 @@ namespace WinFormsApp3
             // 
             // Start
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
@@ -96,7 +96,7 @@ namespace WinFormsApp3
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Start";
             this.ShowIcon = false;
