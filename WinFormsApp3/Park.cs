@@ -98,5 +98,10 @@ namespace WinFormsApp3
                 Button_Park_Click(null, EventArgs.Empty);
             }
         }
+
+        private void Park_Load(object sender, EventArgs e)
+        {
+            comboBox_VehicleType.SelectedIndex = 0;
+        }
     }
 }

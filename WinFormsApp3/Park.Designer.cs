@@ -193,6 +193,7 @@ namespace WinFormsApp3
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Park Vehicle";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.Load += new System.EventHandler(this.Park_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ParkIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

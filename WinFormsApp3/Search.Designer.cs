@@ -91,6 +91,7 @@ namespace WinFormsApp3
             // 
             // comboBox_SearchOption
             // 
+            this.comboBox_SearchOption.AllowDrop = true;
             this.comboBox_SearchOption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_SearchOption.FormattingEnabled = true;
             this.comboBox_SearchOption.Items.AddRange(new object[] {
@@ -185,6 +186,7 @@ namespace WinFormsApp3
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Search Vehicle";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.Load += new System.EventHandler(this.Search_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

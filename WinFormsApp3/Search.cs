@@ -111,5 +111,10 @@ namespace WinFormsApp3
         {
             return VehicleHandler.SearchVehicle_LicensePlate(item);
         }
+
+        private void Search_Load(object sender, EventArgs e)
+        {
+            comboBox_SearchOption.SelectedIndex = 0;
+        }
     }
 }
