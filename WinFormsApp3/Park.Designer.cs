@@ -65,28 +65,31 @@ namespace WinFormsApp3
             "Car",
             "Mc"});
             this.comboBox_VehicleType.Location = new System.Drawing.Point(252, 387);
-            this.comboBox_VehicleType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox_VehicleType.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_VehicleType.Name = "comboBox_VehicleType";
             this.comboBox_VehicleType.Size = new System.Drawing.Size(136, 23);
-            this.comboBox_VehicleType.TabIndex = 3;
+            this.comboBox_VehicleType.TabIndex = 1;
+            this.comboBox_VehicleType.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_VehicleType_KeyPress);
             // 
             // textBox_LicensePlate
             // 
             this.textBox_LicensePlate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_LicensePlate.Location = new System.Drawing.Point(251, 445);
-            this.textBox_LicensePlate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_LicensePlate.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_LicensePlate.MaxLength = 10;
             this.textBox_LicensePlate.Name = "textBox_LicensePlate";
             this.textBox_LicensePlate.Size = new System.Drawing.Size(135, 16);
-            this.textBox_LicensePlate.TabIndex = 1;
+            this.textBox_LicensePlate.TabIndex = 2;
+            this.textBox_LicensePlate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_LicensePlate_KeyPress);
             // 
             // textBox_Owner
             // 
             this.textBox_Owner.Location = new System.Drawing.Point(251, 325);
-            this.textBox_Owner.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_Owner.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Owner.Name = "textBox_Owner";
             this.textBox_Owner.Size = new System.Drawing.Size(135, 23);
-            this.textBox_Owner.TabIndex = 2;
+            this.textBox_Owner.TabIndex = 0;
+            this.textBox_Owner.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Owner_KeyPress);
             // 
             // label_Owner
             // 
@@ -102,10 +105,10 @@ namespace WinFormsApp3
             // button_Park
             // 
             this.button_Park.Location = new System.Drawing.Point(251, 475);
-            this.button_Park.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_Park.Margin = new System.Windows.Forms.Padding(2);
             this.button_Park.Name = "button_Park";
             this.button_Park.Size = new System.Drawing.Size(135, 25);
-            this.button_Park.TabIndex = 4;
+            this.button_Park.TabIndex = 3;
             this.button_Park.Text = "Park";
             this.button_Park.UseVisualStyleBackColor = true;
             this.button_Park.Click += new System.EventHandler(this.Button_Park_Click);
@@ -113,10 +116,10 @@ namespace WinFormsApp3
             // button_Reset
             // 
             this.button_Reset.Location = new System.Drawing.Point(277, 570);
-            this.button_Reset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_Reset.Margin = new System.Windows.Forms.Padding(2);
             this.button_Reset.Name = "button_Reset";
             this.button_Reset.Size = new System.Drawing.Size(76, 26);
-            this.button_Reset.TabIndex = 7;
+            this.button_Reset.TabIndex = 5;
             this.button_Reset.Text = "Reset";
             this.button_Reset.UseVisualStyleBackColor = true;
             this.button_Reset.Click += new System.EventHandler(this.Button_Reset_Click);
@@ -135,7 +138,7 @@ namespace WinFormsApp3
             // pictureBox_ParkIcon
             // 
             this.pictureBox_ParkIcon.Location = new System.Drawing.Point(251, 610);
-            this.pictureBox_ParkIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox_ParkIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox_ParkIcon.Name = "pictureBox_ParkIcon";
             this.pictureBox_ParkIcon.Size = new System.Drawing.Size(135, 57);
             this.pictureBox_ParkIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -145,10 +148,10 @@ namespace WinFormsApp3
             // button_Return
             // 
             this.button_Return.Location = new System.Drawing.Point(160, 570);
-            this.button_Return.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_Return.Margin = new System.Windows.Forms.Padding(2);
             this.button_Return.Name = "button_Return";
             this.button_Return.Size = new System.Drawing.Size(76, 26);
-            this.button_Return.TabIndex = 12;
+            this.button_Return.TabIndex = 4;
             this.button_Return.Text = "Return";
             this.button_Return.UseVisualStyleBackColor = true;
             this.button_Return.Click += new System.EventHandler(this.Button_Return_Click);
@@ -159,7 +162,7 @@ namespace WinFormsApp3
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 26);
-            this.button1.TabIndex = 13;
+            this.button1.TabIndex = 6;
             this.button1.Text = "Close";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -183,7 +186,7 @@ namespace WinFormsApp3
             this.Controls.Add(this.comboBox_VehicleType);
             this.Controls.Add(this.Label_LicensePlate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Park";
             this.ShowIcon = false;

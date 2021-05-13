@@ -10,16 +10,16 @@ namespace Backend
             if (!optionsBuilder.IsConfigured)
             {
                 //Lars
-                //optionsBuilder.UseSqlServer(@"Server=DESKTOP-KQBHCD4\SQLEXPRESS;Database=PragParkWinform;Trusted_Connection=True;MultipleActiveResultSets=true");
-                //optionsBuilder.UseLazyLoadingProxies();
+                optionsBuilder.UseSqlServer(@"Server=DESKTOP-KQBHCD4\SQLEXPRESS;Database=PragParkWinform;Trusted_Connection=True;MultipleActiveResultSets=true");
+                optionsBuilder.UseLazyLoadingProxies();
 
                 //Tintin
                 //optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-FPE71HP\SQLEXPRESS;Database=PragParkWinform;Trusted_Connection=True;MultipleActiveResultSets=true");
                 //optionsBuilder.UseLazyLoadingProxies();
 
                 //Björn
-                optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Database=PragParkWinform;Trusted_Connection=True;MultipleActiveResultSets=true");
-                optionsBuilder.UseLazyLoadingProxies();
+                //optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Database=PragParkWinform;Trusted_Connection=True;MultipleActiveResultSets=true");
+                //optionsBuilder.UseLazyLoadingProxies();
 
                 //Sebastian
                 //optionsBuilder.UseSqlServer(@"Server=LAPTOP-M2HEUQ01\SQLEXPRESS;Database=PragParkWinform;Trusted_Connection=True;MultipleActiveResultSets=true");

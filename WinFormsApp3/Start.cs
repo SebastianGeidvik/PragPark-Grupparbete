@@ -17,7 +17,7 @@ namespace WinFormsApp3
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button_Park_Click(object sender, EventArgs e)
         {
             Park park = new Park();
             this.Visible = false;
@@ -25,7 +25,7 @@ namespace WinFormsApp3
             this.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button_Search_Click(object sender, EventArgs e)
         {
             Search search = new Search();
             this.Visible = false;
@@ -33,7 +33,7 @@ namespace WinFormsApp3
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button_Remove_Click(object sender, EventArgs e)
         {
             RemoveVehicle removeVehicle = new RemoveVehicle();
             this.Visible = false;
@@ -41,9 +41,29 @@ namespace WinFormsApp3
             this.Close();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button_Close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(sender == button_Park)
+            {
+                button_Park_Click(sender, EventArgs.Empty);
+            }
+            if (sender == button_Search)
+            {
+                button_Search_Click(sender, EventArgs.Empty);
+            }
+            if (sender == button_Remove)
+            {
+                button_Remove_Click(sender, EventArgs.Empty);
+            }
+            if (sender == button_Close)
+            {
+                button_Close_Click(sender, EventArgs.Empty);
+            }
         }
     }
 }

@@ -74,5 +74,29 @@ namespace WinFormsApp3
         {
             this.Close();
         }
+
+        private void textBox_Owner_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Return)
+            {
+                comboBox_VehicleType.Select();
+            }
+        }
+
+        private void comboBox_VehicleType_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                textBox_LicensePlate.Select();
+            }
+        }
+
+        private void textBox_LicensePlate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                Button_Park_Click(null, EventArgs.Empty);
+            }
+        }
     }
 }

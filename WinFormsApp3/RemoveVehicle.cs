@@ -18,7 +18,7 @@ namespace WinFormsApp3
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button_Return_Click(object sender, EventArgs e)
         {
             Start start = new Start();
             this.Visible = false;
@@ -26,31 +26,36 @@ namespace WinFormsApp3
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button_Remove_Click(object sender, EventArgs e)
         {
             try
             {
-                VehicleHandler.RemoveVehicle(textBox1.Text);
-                picBox_Remove.Image = Properties.Resources.carred;
+                VehicleHandler.RemoveVehicle(textBox_LicensePlate.Text);
+                picBox_VehiclePic.Image = Properties.Resources.carred;
             }
             catch(Exception)
             {
-                MessageBox.Show("License plate does not exist in the database");
+                MessageBox.Show($"License plate {textBox_LicensePlate.Text} does not exist in the database");
             }
-            textBox1.Text = "";
+            textBox_LicensePlate.Text = "";
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void button_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void textBox_LicensePlate_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Return)
             {
-                button1_Click(null, EventArgs.Empty);
+                button_Remove_Click(null, EventArgs.Empty);
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button_Reset_Click(object sender, EventArgs e)
         {
-            this.Close();
+            textBox_LicensePlate.Text = "";
         }
     }
 }

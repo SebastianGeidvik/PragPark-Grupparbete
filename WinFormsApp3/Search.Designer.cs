@@ -38,7 +38,9 @@ namespace WinFormsApp3
             this.button_Reset = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_Close = new System.Windows.Forms.Button();
+            this.listBox_ItemTypes = new System.Windows.Forms.RichTextBox();
+            this.listBox_ItemInfo = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // button_Search
@@ -60,6 +62,7 @@ namespace WinFormsApp3
             this.textBox_SearchText.Size = new System.Drawing.Size(173, 23);
             this.textBox_SearchText.TabIndex = 2;
             this.textBox_SearchText.Visible = false;
+            this.textBox_SearchText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_SearchText_KeyPress);
             // 
             // button_Return
             // 
@@ -79,14 +82,16 @@ namespace WinFormsApp3
             this.listBox_SearchResult.ForeColor = System.Drawing.Color.Black;
             this.listBox_SearchResult.FormattingEnabled = true;
             this.listBox_SearchResult.ItemHeight = 15;
-            this.listBox_SearchResult.Location = new System.Drawing.Point(262, 408);
+            this.listBox_SearchResult.Location = new System.Drawing.Point(125, 412);
             this.listBox_SearchResult.Margin = new System.Windows.Forms.Padding(2);
             this.listBox_SearchResult.Name = "listBox_SearchResult";
             this.listBox_SearchResult.Size = new System.Drawing.Size(126, 75);
             this.listBox_SearchResult.TabIndex = 4;
+            this.listBox_SearchResult.SelectedIndexChanged += new System.EventHandler(this.listBox_SearchResult_SelectedIndexChanged);
             // 
             // comboBox_SearchOption
             // 
+            this.comboBox_SearchOption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_SearchOption.FormattingEnabled = true;
             this.comboBox_SearchOption.Items.AddRange(new object[] {
             "License plate",
@@ -95,8 +100,8 @@ namespace WinFormsApp3
             this.comboBox_SearchOption.Name = "comboBox_SearchOption";
             this.comboBox_SearchOption.Size = new System.Drawing.Size(173, 23);
             this.comboBox_SearchOption.TabIndex = 1;
-            this.comboBox_SearchOption.Text = "Choose Option";
             this.comboBox_SearchOption.SelectedIndexChanged += new System.EventHandler(this.comboBox_SearchOption_SelectedIndexChanged);
+            this.comboBox_SearchOption.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_SearchOption_KeyPress);
             // 
             // button_Reset
             // 
@@ -128,16 +133,32 @@ namespace WinFormsApp3
             this.label2.Size = new System.Drawing.Size(0, 15);
             this.label2.TabIndex = 8;
             // 
-            // button1
+            // button_Close
             // 
-            this.button1.Location = new System.Drawing.Point(434, 506);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 25);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Close";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_Close.Location = new System.Drawing.Point(434, 506);
+            this.button_Close.Margin = new System.Windows.Forms.Padding(2);
+            this.button_Close.Name = "button_Close";
+            this.button_Close.Size = new System.Drawing.Size(78, 25);
+            this.button_Close.TabIndex = 9;
+            this.button_Close.Text = "Close";
+            this.button_Close.UseVisualStyleBackColor = true;
+            this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
+            // 
+            // listBox_ItemTypes
+            // 
+            this.listBox_ItemTypes.Location = new System.Drawing.Point(288, 412);
+            this.listBox_ItemTypes.Name = "listBox_ItemTypes";
+            this.listBox_ItemTypes.Size = new System.Drawing.Size(104, 75);
+            this.listBox_ItemTypes.TabIndex = 10;
+            this.listBox_ItemTypes.Text = "";
+            // 
+            // listBox_ItemInfo
+            // 
+            this.listBox_ItemInfo.Location = new System.Drawing.Point(389, 412);
+            this.listBox_ItemInfo.Name = "listBox_ItemInfo";
+            this.listBox_ItemInfo.Size = new System.Drawing.Size(123, 75);
+            this.listBox_ItemInfo.TabIndex = 11;
+            this.listBox_ItemInfo.Text = "";
             // 
             // Search
             // 
@@ -146,7 +167,9 @@ namespace WinFormsApp3
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(644, 796);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.listBox_ItemInfo);
+            this.Controls.Add(this.listBox_ItemTypes);
+            this.Controls.Add(this.button_Close);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_Reset);
@@ -177,6 +200,8 @@ namespace WinFormsApp3
         private System.Windows.Forms.Button button_Reset;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_Close;
+        private System.Windows.Forms.RichTextBox listBox_ItemTypes;
+        private System.Windows.Forms.RichTextBox listBox_ItemInfo;
     }
 }

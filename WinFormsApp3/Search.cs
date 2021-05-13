@@ -25,32 +25,43 @@ namespace WinFormsApp3
         private void button_Search_Click(object sender, EventArgs e)
         {
             listBox_SearchResult.Items.Clear();
-            using (var dbcontext = new PragParkContext())
+            if (comboBox_SearchOption.Text == "License plate")
             {
-                if (comboBox_SearchOption.Text == "License plate")
+                try
                 {
-                    Vehicle vehicle = dbcontext.Vehicles.Where(v => v.LicensePlate == textBox_SearchText.Text).First();
-                    listBox_SearchResult.Items.Add($"Spot: {vehicle.Id}");
-                    label2.Text = "";
+                    var vehicle = VehicleHandler.SearchVehicle_LicensePlate(textBox_SearchText.Text);
+                    listBox_SearchResult.Items.Add(vehicle.LicensePlate);
                 }
-                else if (comboBox_SearchOption.Text == "Owner name")
+                catch(ApplicationException ex)
                 {
-                    var vehicleList = dbcontext.Vehicles.Where(v => v.OwnerName == textBox_SearchText.Text).ToList();
-                    foreach (Vehicle vehicle in vehicleList)
-                    {
-                        listBox_SearchResult.Items.Add($"Spot: {vehicle.Id} | {vehicle.LicensePlate}");
-                    }
-                    label2.Text = "";
+                    MessageBox.Show(ex.Message);
                 }
-                else
-                {
-                    MessageBox.Show("Choose a search parameter");
-                }
+                textBox_SearchText.Text = "";
             }
+            else if (comboBox_SearchOption.Text == "Owner name")
+            {
+                try
+                {
+                    var vehicleList = VehicleHandler.SearchVehicles_OwnerName(textBox_SearchText.Text);
+                    vehicleList.ForEach(v => listBox_SearchResult.Items.Add(v.LicensePlate));
+                }
+                catch (ApplicationException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                textBox_SearchText.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Choose a search parameter");
+            }
+            listBox_SearchResult.Select();
         }
 
         private void comboBox_SearchOption_SelectedIndexChanged(object sender, EventArgs e)
         {
+            label2.Text = "";
+            listBox_SearchResult.Items.Clear();
             if (comboBox_SearchOption.Text == "License plate")
             {
                 label2.Text = "Enter license plate";
@@ -62,6 +73,13 @@ namespace WinFormsApp3
                 textBox_SearchText.Visible = true;
             }
         }
+        private void comboBox_SearchOption_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                textBox_SearchText.Select();
+            }
+        }
         private void button_Reset_Click(object sender, EventArgs e)
         {
             textBox_SearchText.Text = "";
@@ -69,9 +87,29 @@ namespace WinFormsApp3
             comboBox_SearchOption.Text = "";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button_Close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void textBox_SearchText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                button_Search_Click(null, EventArgs.Empty);
+            }
+        }
+
+        private void listBox_SearchResult_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Vehicle vehicle = GetItemInfo_ListBox_SearhResult(((ListBox)sender).SelectedItem.ToString());
+            listBox_ItemTypes.Text =
+                " License plate\n Vehicle type\n Owner\n Parking spot";
+            listBox_ItemInfo.Text =
+                $" {vehicle.LicensePlate}\n {vehicle.VehicleType}\n {vehicle.OwnerName}\n {vehicle.Id}";
+        }
+        private Vehicle GetItemInfo_ListBox_SearhResult(string item)
+        {
+            return VehicleHandler.SearchVehicle_LicensePlate(item);
         }
     }
 }

@@ -10,10 +10,9 @@ namespace Backend
     {
         public static void AddVehicle(string licensePlate, string ownerName, string vehicleType)
         {
-            var validLicensePlate = ValidateLicensePlate(licensePlate);
             using (var dbContext = new PragParkContext())
             {
-                dbContext.Vehicles.Add(new Vehicle(validLicensePlate, ownerName, vehicleType));
+                dbContext.Vehicles.Add(new Vehicle(licensePlate, ownerName, vehicleType));
                 dbContext.SaveChanges();
             }
         }
@@ -30,25 +29,41 @@ namespace Backend
                 }
             }
         }
-        //public static Vehicle SearchVehicle(string licensePlate)
-        //{
-
-        //}
-        //public static List<Vehicle> SearchVehicle(string owner)
-        //{
-
-        //}
-        public static string ValidateLicensePlate(string licensePlate)
+        public static Vehicle SearchVehicle_LicensePlate(string licensePlate)
         {
-
-            if (licensePlate.Length > 3)
+            using (var dbContext = new PragParkContext())
             {
-                return licensePlate;
-            }
-            else
-            {
-                throw new ApplicationException("License plate is not within valid range(3-10).");
+                try
+                {
+                    Vehicle vehicle = dbContext.Vehicles.First(v => v.LicensePlate == licensePlate);
+                    return vehicle;
+                }
+                catch
+                {
+                    throw new ApplicationException($"Couldnt find a vehicle with license plate {licensePlate}");
+                }
             }
         }
+        public static List<Vehicle> SearchVehicles_OwnerName(string owner)
+        {
+            using (var dbContext = new PragParkContext())
+            {
+                var vehicleList = new List<Vehicle>();
+                try
+                {
+                    vehicleList = dbContext.Vehicles.Where(v => v.OwnerName == owner).ToList();
+                }
+                catch
+                {
+                    throw new ApplicationException($"Couldnt find any vehicles owned by {owner}");
+                }
+                if (vehicleList.Count < 1)
+                {
+                    throw new ApplicationException($"Couldnt find any vehicles owned by {owner}");
+                }
+                return vehicleList;
+            }
+        }
+
     }
 }
