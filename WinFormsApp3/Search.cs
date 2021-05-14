@@ -24,7 +24,7 @@ namespace WinFormsApp3
 
         private void button_Search_Click(object sender, EventArgs e)
         {
-            listBox_SearchResult.Items.Clear();
+            ClearSearchResult();
             if (comboBox_SearchOption.Text == "License plate")
             {
                 try
@@ -57,9 +57,16 @@ namespace WinFormsApp3
             }
             listBox_SearchResult.Select();
         }
+        private void ClearSearchResult()
+        {
+            listBox_SearchResult.Items.Clear();
+            listBox_ItemTypes.Text = "";
+            listBox_ItemInfo.Text = "";
+        }
 
         private void comboBox_SearchOption_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ClearSearchResult();
             label2.Text = "";
             listBox_SearchResult.Items.Clear();
             if (comboBox_SearchOption.Text == "License plate")
@@ -85,6 +92,8 @@ namespace WinFormsApp3
             textBox_SearchText.Text = "";
             listBox_SearchResult.Items.Clear();
             comboBox_SearchOption.Text = "";
+            listBox_ItemTypes.Text = "";
+            listBox_ItemInfo.Text = "";
         }
 
         private void button_Close_Click(object sender, EventArgs e)
